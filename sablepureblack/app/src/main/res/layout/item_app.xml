@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- SablePureBlack — by @drkmuqeett
+     One selectable app in the scope sheet. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/appRow"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/selectableItemBackground"
+    android:clickable="true"
+    android:focusable="true"
+    android:gravity="center_vertical"
+    android:minHeight="60dp"
+    android:orientation="horizontal"
+    android:paddingStart="6dp"
+    android:paddingTop="8dp"
+    android:paddingEnd="6dp"
+    android:paddingBottom="8dp">
+
+    <FrameLayout
+        android:layout_width="@dimen/sable_icon"
+        android:layout_height="@dimen/sable_icon"
+        android:layout_marginEnd="14dp"
+        android:background="@drawable/bg_icon_frame"
+        android:padding="6dp">
+
+        <ImageView
+            android:id="@+id/appIcon"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@null"
+            android:scaleType="fitCenter" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/appLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:fontFamily="sans-serif-medium"
+            android:maxLines="1"
+            android:textColor="@color/sable_text_primary"
+            android:textSize="14sp"
+            tools:text="Chrome" />
+
+        <TextView
+            android:id="@+id/appPackage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:ellipsize="end"
+            android:fontFamily="sans-serif"
+            android:maxLines="1"
+            android:textColor="@color/sable_text_tertiary"
+            android:textSize="10sp"
+            tools:text="com.android.chrome" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/appSystemBadge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:background="@drawable/bg_badge"
+        android:fontFamily="sans-serif-medium"
+        android:letterSpacing="0.06"
+        android:paddingStart="7dp"
+        android:paddingTop="2dp"
+        android:paddingEnd="7dp"
+        android:paddingBottom="2dp"
+        android:text="@string/scope_system_badge"
+        android:textColor="@color/sable_text_secondary"
+        android:textSize="8sp"
+        android:visibility="gone"
+        tools:visibility="visible" />
+
+    <com.google.android.material.checkbox.MaterialCheckBox
+        android:id="@+id/appCheck"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:clickable="false"
+        android:focusable="false" />
+
+</LinearLayout>

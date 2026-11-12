@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- SablePureBlack — by @drkmuqeett -->
+<resources>
+    <dimen name="sable_screen_padding">20dp</dimen>
+    <dimen name="sable_card_radius">22dp</dimen>
+    <dimen name="sable_card_padding">18dp</dimen>
+    <dimen name="sable_gap">12dp</dimen>
+    <dimen name="sable_header_top">26dp</dimen>
+    <dimen name="sable_icon">40dp</dimen>
+</resources>

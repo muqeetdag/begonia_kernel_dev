@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- SablePureBlack — by @drkmuqeett
+     Material 3, dark-only, true #000000. Material3 themes descend from
+     Theme.AppCompat, so AppCompatActivity and MaterialSwitch both inflate
+     correctly. -->
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="Theme.SablePureBlack" parent="Theme.Material3.Dark.NoActionBar">
+
+        <!-- Window -->
+        <item name="android:colorBackground">@color/sable_black</item>
+        <item name="android:windowBackground">@color/sable_black</item>
+        <item name="android:statusBarColor">@color/sable_black</item>
+        <item name="android:navigationBarColor">@color/sable_black</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="23">false</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="27">false</item>
+        <item name="android:enforceStatusBarContrast" tools:targetApi="29">false</item>
+        <item name="android:enforceNavigationBarContrast" tools:targetApi="29">false</item>
+        <item name="android:windowLayoutInDisplayCutoutMode" tools:targetApi="27">shortEdges</item>
+
+        <!-- Material 3 colour roles, pinned so dynamic colour can never lighten
+             the UI past true black. -->
+        <item name="colorPrimary">@color/sable_accent</item>
+        <item name="colorOnPrimary">@color/sable_black</item>
+        <item name="colorPrimaryContainer">@color/sable_surface</item>
+        <item name="colorOnPrimaryContainer">@color/sable_text_primary</item>
+        <item name="colorSecondary">@color/sable_accent_seed</item>
+        <item name="colorOnSecondary">@color/sable_black</item>
+        <item name="colorSecondaryContainer">@color/sable_surface_pressed</item>
+        <item name="colorOnSecondaryContainer">@color/sable_text_primary</item>
+        <item name="colorTertiary">@color/sable_accent_dim</item>
+        <item name="colorSurface">@color/sable_surface</item>
+        <item name="colorOnSurface">@color/sable_text_primary</item>
+        <item name="colorSurfaceVariant">@color/sable_surface_pressed</item>
+        <item name="colorOnSurfaceVariant">@color/sable_text_secondary</item>
+        <item name="colorOutline">@color/sable_stroke</item>
+        <item name="colorOutlineVariant">@color/sable_stroke</item>
+        <item name="colorControlActivated">@color/sable_accent</item>
+        <item name="colorControlNormal">@color/sable_accent_dim</item>
+        <item name="colorError">@color/sable_inactive</item>
+        <item name="android:colorAccent">@color/sable_accent</item>
+        <item name="android:textColorPrimary">@color/sable_text_primary</item>
+        <item name="android:textColorSecondary">@color/sable_text_secondary</item>
+        <item name="android:textColorHint">@color/sable_text_tertiary</item>
+    </style>
+
+</resources>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- SablePureBlack — by @drkmuqeett -->
+<full-backup-content>
+    <include
+        domain="sharedpref"
+        path="." />
+</full-backup-content>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- SablePureBlack — by @drkmuqeett -->
+<resources>
+    <!-- True AMOLED pitch black: pixels physically off on OLED. -->
+    <color name="sable_black">#FF000000</color>
+    <!-- Deep Obsidian: soft dark contrast. -->
+    <!-- Elevated card surface. -->
+    <color name="sable_surface">#FF121212</color>
+    <color name="sable_surface_pressed">#FF1A1A1A</color>
+    <color name="sable_surface_sunken">#FF0D0D0D</color>
+    <color name="sable_stroke">#FF242424</color>
+    <color name="sable_stroke_bright">#FF3A3A3A</color>
+
+    <color name="sable_text_primary">#FFFFFFFF</color>
+    <color name="sable_text_secondary">#FFB3B3B3</color>
+    <color name="sable_text_tertiary">#FF7A7A7A</color>
+
+    <color name="sable_accent">#FFEAEAEA</color>
+    <color name="sable_accent_dim">#FF9E9E9E</color>
+    <color name="sable_accent_seed">#FF3DD68C</color>
+    <color name="sable_active">#FF3DD68C</color>
+    <color name="sable_inactive">#FFFF6B6B</color>
+    <color name="sable_warning">#FFFFC857</color>
+
+    <color name="sable_ripple">#33FFFFFF</color>
+</resources>

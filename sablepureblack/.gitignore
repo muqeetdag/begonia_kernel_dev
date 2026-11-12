@@ -1,0 +1,18 @@
+# Gradle / Android
+.gradle/
+build/
+local.properties
+captures/
+.externalNativeBuild/
+.cxx/
+
+# Signing material is never committed
+signing.properties
+*.jks
+*.keystore
+
+# IDE
+.idea/
+*.iml
+.DS_Store
+*.hprof

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  SablePureBlack — by @drkmuqeett
+  Companion UI shell: one flat RecyclerView plus a ModalBottomSheet layer for the
+  per-app scope selector, so scrolling stays a single linear pass at 60fps+.
+-->
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/sable_black">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/contentList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/sable_black"
+        android:clipToPadding="false"
+        android:overScrollMode="never"
+        android:paddingStart="@dimen/sable_screen_padding"
+        android:paddingTop="@dimen/sable_header_top"
+        android:paddingEnd="@dimen/sable_screen_padding"
+        android:paddingBottom="40dp"
+        android:scrollbars="none"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

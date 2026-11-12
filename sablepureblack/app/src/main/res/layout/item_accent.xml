@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- SablePureBlack — by @drkmuqeett
+     Accent seed picker, shown when Custom Accent Dark is the active palette. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/sable_gap"
+    android:background="@drawable/bg_card"
+    android:orientation="vertical"
+    android:padding="@dimen/sable_card_padding">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/accent_picker_title"
+        android:textColor="@color/sable_text_primary"
+        android:textSize="14sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:fontFamily="sans-serif"
+        android:text="@string/accent_picker_sub"
+        android:textColor="@color/sable_text_tertiary"
+        android:textSize="11sp" />
+
+    <LinearLayout
+        android:id="@+id/accentRow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:orientation="horizontal" />
+
+</LinearLayout>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- SablePureBlack — by @drkmuqeett
+     Entry card in the main list that opens the scope selector sheet. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scopeEntryRow"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/sable_gap"
+    android:background="@drawable/bg_card_ripple"
+    android:clickable="true"
+    android:focusable="true"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:padding="@dimen/sable_card_padding">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/scopeEntryTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:text="@string/section_scope"
+            android:textColor="@color/sable_text_primary"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/scopeEntrySummary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:fontFamily="sans-serif"
+            android:textColor="@color/sable_text_tertiary"
+            android:textSize="11sp"
+            tools:text="3 of 42 selected · only selected apps" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/scopeEntryAction"
+        android:layout_width="wrap_content"
+        android:layout_height="36dp"
+        android:background="@drawable/bg_button_outline"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:text="@string/scope_manage"
+        android:textColor="@color/sable_text_primary"
+        android:textSize="12sp" />
+
+</LinearLayout>

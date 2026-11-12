@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- SablePureBlack — by @drkmuqeett
+     One palette row: swatch, title, subtitle, selection ring. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/paletteRow"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/sable_gap"
+    android:background="@drawable/bg_card_ripple"
+    android:clickable="true"
+    android:focusable="true"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:padding="@dimen/sable_card_padding">
+
+    <View
+        android:id="@+id/paletteSwatch"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="14dp"
+        android:background="@drawable/bg_swatch" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/paletteTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:fontFamily="sans-serif-medium"
+            android:maxLines="1"
+            android:textColor="@color/sable_text_primary"
+            android:textSize="15sp"
+            tools:text="Pitch Black" />
+
+        <TextView
+            android:id="@+id/paletteSubtitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:ellipsize="end"
+            android:fontFamily="sans-serif"
+            android:maxLines="1"
+            android:textColor="@color/sable_text_tertiary"
+            android:textSize="11sp"
+            tools:text="True #000000 — OLED pixels off" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/paletteCheck"
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="12dp"
+        android:background="@drawable/bg_dot"
+        android:visibility="invisible"
+        tools:visibility="visible" />
+
+</LinearLayout>

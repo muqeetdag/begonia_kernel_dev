@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- SablePureBlack — by @drkmuqeett -->
+<resources>
+    <string name="app_name">SablePureBlack</string>
+    <string name="app_tagline">Pitch-black AMOLED force for your apps</string>
+    <string name="author_badge">by @drkmuqeett</string>
+    <string name="xposed_description">by @drkmuqeett — SablePureBlack forces true pitch-black #000000 AMOLED panels and custom dark palettes on any selected app at runtime. No brightness changes. No screen filters.</string>
+
+    <!-- Header / probe -->
+    <string name="status_active">Active</string>
+    <string name="status_inactive">Not Activated in LSPosed</string>
+    <string name="probe_active_detail">Framework injected via %1$s · %2$s palette live in every scoped app.</string>
+    <string name="probe_inactive_detail">Not injected yet — enable the module in %1$s, scope your apps, then force-stop them.</string>
+    <string name="probe_ipc_ok">IPC bridge healthy</string>
+    <string name="probe_ipc_missing">IPC bridge unavailable</string>
+
+    <!-- Sections -->
+    <string name="section_palette">Theme palette</string>
+    <string name="section_toggles">Overrides</string>
+    <string name="section_scope">Per-app scope</string>
+    <string name="section_guide">Setup guide</string>
+
+    <!-- Palette switcher -->
+    <string name="palette_pitch_black">Pitch Black</string>
+    <string name="palette_pitch_black_sub">True #000000 — OLED pixels off</string>
+    <string name="palette_obsidian">Deep Obsidian</string>
+    <string name="palette_obsidian_sub">Soft dark contrast, #0A0A0A surfaces</string>
+    <string name="palette_custom">Custom Accent Dark</string>
+    <string name="palette_custom_sub">Your accent, clamped to near-black</string>
+    <string name="accent_picker_title">Accent seed</string>
+    <string name="accent_picker_sub">Tints the near-black surface and UI accents. Every channel stays inside the AMOLED-safe band.</string>
+
+    <!-- Toggles -->
+    <string name="toggle_webview">WebView force-dark</string>
+    <string name="toggle_webview_sub">Force FORCE_DARK_ON in every WebView</string>
+    <string name="toggle_text">Smart text contrast boost</string>
+    <string name="toggle_text_sub">Lift unreadable dark text to #EAEAEA</string>
+    <string name="opacity_title">Forced surface opacity</string>
+    <string name="opacity_sub">Translucent white cards become translucent black, never solid slabs</string>
+    <string name="opacity_value">%1$d%%</string>
+
+    <!-- Scope selector -->
+    <string name="scope_search_hint">Search apps</string>
+    <string name="scope_selected_mode">Only selected apps</string>
+    <string name="scope_selected_mode_sub">When off, every app in the LSPosed scope is forced black</string>
+    <string name="scope_count">%1$d of %2$d selected</string>
+    <string name="scope_loading">Loading installed apps…</string>
+    <string name="scope_empty">No apps match “%1$s”</string>
+    <string name="scope_system_badge">SYSTEM</string>
+    <string name="scope_manage">Manage</string>
+    <string name="scope_entry_summary">%1$d of %2$d selected · %3$s</string>
+    <string name="scope_hint">Force-stop a selected app after toggling so hooks attach immediately.</string>
+
+    <!-- Guide -->
+    <string name="guide_step_1">Enable SablePureBlack in LSPosed Manager (or Zygisk Vector).</string>
+    <string name="guide_step_2">Open Scope and tick the apps you want forced black, or use the list above.</string>
+    <string name="guide_step_3">Force-stop each ticked app from App info — hooks attach on its next launch.</string>
+    <string name="guide_step_4">Reopen the app. Light surfaces become your chosen palette instantly.</string>
+    <string name="open_manager">Open LSPosed scope settings</string>
+    <string name="open_app_info">Open App info</string>
+
+    <!-- About -->
+    <string name="about_title">About</string>
+    <string name="about_credit">by @drkmuqeett</string>
+    <string name="about_body">SablePureBlack rewrites light window and view backgrounds to a true AMOLED palette at runtime, inside each hooked app process. It never writes Settings.System.SCREEN_BRIGHTNESS, never changes brightness mode, never sets window screenBrightness and never applies a SurfaceFlinger colour matrix or hardware tint.</string>
+    <string name="footer_credit">SablePureBlack 2.0 · by @drkmuqeett</string>
+
+    <!-- Toasts -->
+    <string name="toast_saved">Saved — force-stop the app to apply</string>
+    <string name="toast_manager_missing">No LSPosed / Vector manager found on this device</string>
+    <string name="toast_app_not_found">Could not open app info</string>
+</resources>

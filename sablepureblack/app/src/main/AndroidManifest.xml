@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  SablePureBlack — by @drkmuqeett
+  Package: com.drkmuqeett.pureblack
+  True pitch-black AMOLED dark mode for user-selected apps (LSPosed / Zygisk Vector).
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!--
+      Package visibility (Android 11+). The module needs to:
+        - enumerate launchable user apps for the per-app scope selector,
+        - see the LSPosed / Vector manager packages for the deep-link button.
+      QUERY_ALL_PACKAGES is intentionally NOT requested: the <queries> block below
+      plus the implicit LAUNCHER-intent query in AppRepository covers both needs
+      with the narrowest possible surface. No other permission is requested, and
+      nothing here can touch display brightness or colour hardware.
+    -->
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.MAIN" />
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent>
+        <package android:name="org.lsposed.manager" />
+        <package android:name="io.github.lsposed.manager" />
+        <package android:name="org.lsposed.lspatch" />
+        <package android:name="org.meowcat.edxposed.manager" />
+        <package android:name="de.robv.android.xposed.installer" />
+        <package android:name="com.solohsu.android.edxp.manager" />
+        <package android:name="org.vector.manager" />
+        <package android:name="io.github.vector.manager" />
+    </queries>
+
+    <application
+        android:name=".SableApplication"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:enableOnBackInvokedCallback="true"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.SablePureBlack"
+        tools:targetApi="34">
+
+        <!-- ==== LSPosed / Zygisk Vector module metadata ==== -->
+        <meta-data
+            android:name="xposedmodule"
+            android:value="true" />
+        <meta-data
+            android:name="xposeddescription"
+            android:value="@string/xposed_description" />
+        <meta-data
+            android:name="xposedminversion"
+            android:value="82" />
+        <!-- Makes the module's preference file readable in every scoped process,
+             which is what enables live configuration updates over IPC. -->
+        <meta-data
+            android:name="xposedsharedprefs"
+            android:value="true" />
+        <meta-data
+            android:name="xposedscope"
+            android:resource="@array/xposed_scope" />
+
+        <activity
+            android:name=".MainActivity"
+            android:configChanges="orientation|screenSize|screenLayout|keyboardHidden|uiMode|smallestScreenSize"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:launchMode="singleTop"
+            android:theme="@style/Theme.SablePureBlack"
+            android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+    </application>
+
+</manifest>

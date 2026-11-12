@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- SablePureBlack — by @drkmuqeett
+     Opacity slider card: how opaque forced surfaces become. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/sable_gap"
+    android:background="@drawable/bg_card"
+    android:orientation="vertical"
+    android:padding="@dimen/sable_card_padding">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="sans-serif-medium"
+            android:text="@string/opacity_title"
+            android:textColor="@color/sable_text_primary"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/opacityValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:textColor="@color/sable_accent"
+            android:textSize="14sp"
+            tools:text="100%" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:fontFamily="sans-serif"
+        android:lineSpacingExtra="2dp"
+        android:text="@string/opacity_sub"
+        android:textColor="@color/sable_text_tertiary"
+        android:textSize="11sp" />
+
+    <SeekBar
+        android:id="@+id/opacitySeek"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="4dp"
+        android:max="100"
+        android:paddingStart="0dp"
+        android:paddingEnd="0dp"
+        android:progressBackgroundTint="@color/sable_stroke_bright"
+        android:progressTint="@color/sable_accent"
+        android:splitTrack="false"
+        android:thumbTint="@color/sable_accent"
+        tools:progress="100" />
+
+</LinearLayout>

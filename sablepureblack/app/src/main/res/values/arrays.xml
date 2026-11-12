@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- SablePureBlack — by @drkmuqeett
+     Apps pre-scoped on first install. Users freely add or remove entries in the
+     manager; the payload re-reads the scope on every process start. -->
+<resources>
+    <string-array name="xposed_scope" translatable="false">
+        <item>com.android.chrome</item>
+        <item>com.google.android.gm</item>
+        <item>com.google.android.apps.messaging</item>
+        <item>com.google.android.youtube</item>
+        <item>com.google.android.apps.maps</item>
+        <item>com.whatsapp</item>
+        <item>com.instagram.android</item>
+        <item>org.telegram.messenger</item>
+        <item>com.twitter.android</item>
+        <item>com.reddit.frontpage</item>
+    </string-array>
+</resources>
