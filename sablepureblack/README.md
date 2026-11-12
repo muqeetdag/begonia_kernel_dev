@@ -68,6 +68,29 @@ adb install -r app/build/outputs/apk/release/app-release.apk
 The in-app **Per-app scope** sheet writes the same allow-list, which the payload honours when
 "Only selected apps" is on.
 
+## Download without building
+
+* **Source archive** — [`download/SablePureBlack-v2.0.0-source.zip`](../download/SablePureBlack-v2.0.0-source.zip)
+  (321 KB, 90 files, wrapper jar + executable `gradlew` included). Unzip anywhere, then
+  `./gradlew :app:assembleRelease` → `app/build/outputs/apk/release/app-release.apk`.
+* **Prebuilt APK via CI** — [`ci/build-sablepureblack.yml`](../ci/build-sablepureblack.yml) builds a signed
+  APK on GitHub's runners (JDK 17, SDK 34), verifies the manifest + signature block, and uploads it as a
+  30-day artifact. It sits outside `.github/workflows/` only because this repository's CI identity is not
+  granted the `workflows` scope; to light it up, move it once:
+
+  ```bash
+  mkdir -p .github/workflows
+  git mv ci/build-sablepureblack.yml .github/workflows/   # or just: cp
+  git commit -m "ci: enable SablePureBlack APK build" && git push
+  ```
+
+  From the next push touching `sablepureblack/` (or a manual *Run workflow*), download
+  `SablePureBlack-release` from the run's **Artifacts** section.
+
+> Uploading to Gofile must happen from a network that can reach `gofile.io` — this build sandbox cannot.
+> Once you have the APK, drag it into <https://gofile.io/uploadFile> with
+> `curl -F "file=@app-release.apk" https://upload.gofile.io/uploadfile`.
+
 > Release builds are R8-minified and resource-shrunk. `proguard-rules.pro` pins the entry point named
 > in `assets/xposed_init` (`com.drkmuqeett.pureblack.core.PureBlackHook`), so shrinking can never
 > break hook loading. Signing uses `signing.properties` when present, otherwise an auto-generated
